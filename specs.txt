@@ -4,9 +4,9 @@ Machine specs =-=-=-=-=
 4 registradores (pode ser aumentado)
 Instruções de 8bits, com um endereço de memória com 4 bytes.
 
-ADD 00000001 [DDDDDDDD] [VVVVVVVV] [XXXXXXXX] -> Reg. de Destino, Valor1, Valor2;
+ADD 00000001 [DDDDDDDD] [VVVVVVVV] [XXXXXXXX] -> Endereço de memória, Endereço1, Endereço2;
 SUB 00000010 [DDDDDDDD] [VVVVVVVV] [XXXXXXXX]
-LOAD WORD 00000011 [DDDDDDDD] [MMMMMMMM] [FFFFFFFF] -> Reg. de Destino, Pos de memória, Offset.
-STORE WORD 00000100 [DDDDDDDD] [MMMMMMMM] [FFFFFFFF]
+LOAD WORD 00000011 [DDDDDDDD] 00000000 00000000 -> Endereço de memória
+STORE WORD 00000100 [DDDDDDDD] [MMMMMMMM] 00000000 -> Endereço de memória, dado
 
 http://www.mrc.uidaho.edu/mrc/people/jff/digital/MIPSir.html

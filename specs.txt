@@ -2,11 +2,16 @@ Projeto de arquiteturas
 
 Machine specs =-=-=-=-=
 4 registradores (pode ser aumentado)
-Instruções de 8bits, com um endereço de memória com 4 bytes.
+Instruções de 8bits, com um endereço de memória com 8 bits de dados.
+Arquitetura da CPU 32-bits.
+256Bytes de ram.
+8Bytes de cache.
+4 palavras de 8-bit por bloco da cache diretamente mapeada.
+Tamanho em bits calculados para Cache: 74 bits.
+Tamanho da Tag: 4 bits.
+
 
 ADD 00000001 [DDDDDDDD] [VVVVVVVV] [XXXXXXXX] -> Endereço de memória, Endereço1, Endereço2;
 SUB 00000010 [DDDDDDDD] [VVVVVVVV] [XXXXXXXX]
 LOAD WORD 00000011 [DDDDDDDD] 00000000 00000000 -> Endereço de memória
 STORE WORD 00000100 [DDDDDDDD] [MMMMMMMM] 00000000 -> Endereço de memória, dado
-
-http://www.mrc.uidaho.edu/mrc/people/jff/digital/MIPSir.html

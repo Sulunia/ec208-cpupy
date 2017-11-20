@@ -2,31 +2,31 @@ Projeto de arquiteturas
 
 Machine specs =-=-=-=-=
 4 registradores (pode ser aumentado)
-Instruções de 8bits, com um endereço de memória com 8 bits de dados.
+Instruï¿½ï¿½es de 8bits, com um endereï¿½o de memï¿½ria com 8 bits de dados.
 Arquitetura da CPU 32-bits.
 256Bytes de ram.
-64Bytes de cache.
-16 palavras de 8-bit por bloco da cache diretamente mapeada.
-Tamanho em bits calculados para Cache: 524 bits.
-Tamanho da Tag: 2 bits.
-Tamanho do bloco: 128 bits
+16Bytes de cache.
+4 palavras de 8-bit por bloco da cache diretamente mapeada.
+Tamanho em bits calculados para Cache: 128 bits.
+Tamanho da Tag: 4 bits.
+Tamanho do bloco: 32 bits
 
 
-ADD 00000001 [DDDDDDDD] [VVVVVVVV] [XXXXXXXX] -> Endereço de memória, Endereço1, Endereço2;
+ADD 00000001 [DDDDDDDD] [VVVVVVVV] [XXXXXXXX] -> Endereï¿½o de memï¿½ria, Endereï¿½o1, Endereï¿½o2;
 SUB 00000010 [DDDDDDDD] [VVVVVVVV] [XXXXXXXX]
-LOAD WORD 00000011 [DDDDDDDD] 00000000 00000000 -> Endereço de memória
-STORE WORD 00000100 [DDDDDDDD] [MMMMMMMM] 00000000 -> Endereço de memória, dado
+LOAD WORD 00000011 [DDDDDDDD] 00000000 00000000 -> Endereï¿½o de memï¿½ria
+STORE WORD 00000100 [DDDDDDDD] [MMMMMMMM] 00000000 -> Endereï¿½o de memï¿½ria, dado
 
-CACHE ENDEREÇAMENTO
-TT BB 0000
+CACHE ENDEREÃ‡AMENTO
+TTTT BB 00
 onde:
-B bloco da cache 
-T são os bits de TAG da memória principal
-0 são endereço do dado 
+B bloco da cache
+T sÃ£o os bits de TAG da memÃ³ria principal
+0 sÃ£o endereÃ§o do dado
 
 precisa de um vetor com o bit de validade
 Z[VB1, VB2, VB3, VB4]
-onde Z é o vetor de validação e VB1, VB2, VB3 e VB4 são os dados de validação de cada bloco da cache
+onde Z Ã© o vetor de validaÃ§Ã£o e VB1, VB2, VB3 e VB4 sÃ£o os dados de validaÃ§Ã£o de cada bloco da cache
 
 VV VV VVVV
 TT BB 0000 | DDDDDDDD |
